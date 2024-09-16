@@ -21,6 +21,7 @@ krewes = {
          }
 
 def chooseRandomDevo():
+    classlist = list(krewes.keys())
     classrng = random.randint(0,len(krewes))
     devorng = random.randint(0,len(krewes.get(classrng)))
     print(classrng)
