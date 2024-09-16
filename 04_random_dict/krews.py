@@ -3,7 +3,7 @@
 #SoftDev
 #K<04> -- <Python dictionairies and random selection/dictionairies and random selection/practiced using random selection on elements in a dict>
 #<2024>-<09>-<16>
-#time spent: <elapsed time in hours, rounded to nearest tenth>
+#time spent: <0.2hrs>
 import random
 krewes = {
            4: [ 
@@ -22,8 +22,7 @@ krewes = {
 
 def chooseRandomDevo():
     classlist = list(krewes.keys())
-    classrng = random.randint(0,len(krewes))
-    devorng = random.randint(0,len(krewes.get(classrng)))
-    print(classrng)
-    print(devorng)
-chooseRandomDevo()
+    classrng = random.randint(0,len(krewes)-1)
+    devorng = random.randint(0,len(krewes.get(classlist[classrng])) - 1)
+    return krewes.get(classlist[classrng])[devorng]
+print(chooseRandomDevo())
