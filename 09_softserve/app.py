@@ -1,10 +1,10 @@
 '''
-Brian Liu
+Mark Ma
 Team 54
 SoftDev
 K09 -- CSV and Flask
 2024-09-24
-time spent: 0.5
+time spent: 0.3
 '''
 
 import random
@@ -13,7 +13,7 @@ from flask import Flask
 d = {}
 def randocc():
     with open("occupations.csv", "r") as file:
-        arr = list(csv.reader(file))[1:-2] #omit first and last lines
+        arr = list(csv.reader(file))[1:-1] #omit first and last lines
     for i in arr:
         d.update({i[0]:float(i[1])})
     d.update({"Ducky":0.2}) #make the total 100%
