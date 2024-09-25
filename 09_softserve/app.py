@@ -34,5 +34,6 @@ def hello_world():
 
 if __name__ == "__main__":      # true if this file NOT imported
                                 # meaning that we're running app.py, not another program that imported app.py
+                                # only runs if the current code is the main one
     app.debug = True            # enable auto-reload upon code change
     app.run()
