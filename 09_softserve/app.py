@@ -1,6 +1,6 @@
 '''
-Mark Ma
-Team 54
+Brian Liu
+Team 54 - Anastasia, Mark, Brian
 SoftDev
 K09 -- CSV and Flask
 2024-09-24
@@ -16,6 +16,7 @@ def randocc():
         arr = list(csv.reader(file))[1:-1] #omit first and last lines
     for i in arr:
         d.update({i[0]:float(i[1])})
+    file.close()
     d.update({"Ducky":0.2}) #make the total 100%
     random_occ = random.choices(list(d.keys()), list(d.values()))[0]
     return random_occ
