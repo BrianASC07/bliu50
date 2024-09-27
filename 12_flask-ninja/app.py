@@ -1,5 +1,6 @@
-# Clyde 'Thluffy' Sinclair
+# Brian Liu
 # SoftDev
+# k12 
 # Sep 2024
 
 """
@@ -9,9 +10,22 @@ Q0:
 Q1:
 #yes - http://127.0.0.1:5000/my_foist_template
 Q2:
-render_template()
+predictions:
+render_template() the string is the file name
+foo could correspond to the virtual environment or something.
+collection calls the coll list that was created
+
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-QCC/DISCO
+QCC/DISCO:
+
+- string is the file name
+- foooo is the name of the tab that is created from the local host
+- the parameters in render template correspond to variables that are then sent to the python code in the html
+
+- the {{}} in the html creates a variable. the %% tell html that there is runnable python code within the brackets.
+- {% endfor %} tells html to end the for loop since there isnt like an indent or closing bracket in html to indicate the end. removing it results in syntax error
+
 
 """
 
