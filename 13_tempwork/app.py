@@ -18,10 +18,13 @@ with open("data/occupations.csv", newline="") as csvfile:
     reader = csv.DictReader(csvfile)
     jobs = []
     percents = []
+    links = []
     full = []
     for row in reader:
-        jobs.append(row['Job Class']), percents.append(float(row['Percentage']))
-        full.append({"Job Class": row['Job Class'], "Percentage": row['Percentage']})
+        jobs.append(row['Job Class'])
+        percents.append(float(row['Percentage']))
+        links.append(row['Link'])
+        full.append({"Job Class": row['Job Class'], "Percentage": row['Percentage'], "Link": row['Link']})
 
 def ReturnRandom():
 # random.choices returns a list, [:-1] to ignore last row, k is returned list size
