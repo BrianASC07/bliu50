@@ -1,0 +1,29 @@
+< your heading here >
+
+DISCO:
+* the code works as is - doesn't require any comments to be uncommented
+* new thing imported from flask!! - request
+* form takes user to /auth 
+-----------------------------------------------------------------------
+
+
+Q/C/C:
+* what does ", methods=['GET', 'POST']" do ?
+* wouldn't testmod0 not work because its imported?
+* what does request from flask do?
+* how does testmod0.py work in general
+-----------------------------------------------------------------------
+
+
+OTHER?
+* 
+* 
+* 
+-----------------------------------------------------------------------
+
+
+
+
+
+
+
