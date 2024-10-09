@@ -19,13 +19,16 @@
 <html>
 
   <head>
-    <title> LOGIN PAGE </title>
+    <title> HOME PAGE </title>
   </head>
 
   <body>
     <h1>
-      Howdy, {}!
+      Howdy, {{username}}!
     </h1>
+    <h2> 
+        Method: POST
+    </h2>
 
     <form action="/auth" method="POST">
       <input type="text" name="username">

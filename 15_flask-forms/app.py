@@ -66,7 +66,7 @@ def authenticate():
     #print(request.args['username'])
     #print("***DIAG: request.headers ***")
     #print(request.headers)
-    return request.form['username']  #response to a form submission
+    return ender_template('response.html', username = request.args['username'])  #response to a form submission
 
 
     
