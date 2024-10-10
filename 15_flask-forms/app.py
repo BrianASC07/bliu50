@@ -11,8 +11,6 @@ from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
 from flask import request           #facilitate form submission
 
-#the conventional way:
-#from flask import Flask, render_template, request
 
 app = Flask(__name__)    #create Flask object
 
@@ -66,7 +64,7 @@ def authenticate():
     #print(request.args['username'])
     #print("***DIAG: request.headers ***")
     #print(request.headers)
-    return ender_template('response.html', username = request.args['username'])  #response to a form submission
+    return render_template('response.html', username = request.form.get('username'))  #response to a form submission
 
 
     
