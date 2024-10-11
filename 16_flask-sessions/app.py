@@ -46,10 +46,15 @@ def authenticate():
     #print(request.args['username'])
     #print("***DIAG: request.headers ***")
     #print(request.headers)
-    session['username'] = session.cookies.get('username')
+    session['username'] = request.form('username')
     return render_template('response.html', username = session['username'])  #response to a form submission
-    
+
+
+@app.route("/auth", methods=['GET'])
+def logout():
+    session.pop('username')
+    return redirect("http://127.0.0.1:5000/")
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
-    app.debug = True 
+    app.debug = True
     app.run()
