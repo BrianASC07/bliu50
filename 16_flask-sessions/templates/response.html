@@ -1,33 +1,35 @@
 <!DOCTYPE html>
-<!-- 
-  Clyde 'Thluffy' Sinclair
-  SoftDev
-  Sep 2024
+<!--
+    Brian Liu
+    31
+    SoftDev
+    October 9 2024
 
-     simple demo of HTML forms via Flask
-     
-     trioTASK:
-     If any member of team has forms experience, let their know-how OSMOTE.
-     If no one does, seek external assistance.
-     
-     PROTIP: Revisit code from foundations if you have it.
-     Peruse this code together and discuss how it should work,
-       in conjunction with the back end apparatus.
  -->
 
 
 <html>
 
   <head>
-    <title> HOME PAGE </title>
+    <title> RESPONSE PAGE </title>
+    <style>
+    </style>
   </head>
 
   <body>
     <h1>
-      Howdy, {{username}}!
+      HELLO
     </h1>
-    <br>
+    <p> Request Method: POST </p>
+    <hr>
+    <p> GET: more simple, less secure, used by default </p>
+    <p> POST: has to be called specifically, a bit more secure, not actually secure</p>
+    <form action="/auth" method="POST">
+      <input type="text" name="username">
+      <input type="submit" name="sub1" value=submit>
+    </form>
+    <hr>
+    <p> Team 45: Jady, Brian, Dua </p>
   </body>
 
 </html>
-
