@@ -1,10 +1,38 @@
+body{
+  background-color: rgb(169, 169, 169);
+}
+
 h1 {
   background-color: lightgray;
   color:white;
   text-align: center;
   padding-bottom: 5px;
+  margin-bottom: 0px;
 }
-div {
 
 
+#maindiv {
+  background-color: rgb(156, 153, 153);
+  display: flex ;
+  align-items: baseline;
+  align-content: space-between;
+}
+
+.navtext{
+  list-style-type: none;
+  color: white;
+  white-space: nowrap;
+}
+
+#nav {
+  margin-right: 15%;
+  margin-left: 1%
+}
+
+#footer {
+  padding: 1%;
+  background-color: grey;
+  color:darkgrey;
+  text-align: right;
+  margin: 0%;
 }
