@@ -1,8 +1,8 @@
 # Halls Relief
 #SoftDev
-#K20 - Foundation CSS Tutorial
-#2024-11-13
-#time spent: 1.5
+#K23 - APIs
+#2024-11-20
+#time spent: 1.0
 
 from flask import Flask, render_template, url_for, session, request, redirect
 import os, json
@@ -12,10 +12,10 @@ app = Flask(__name__)
 
 app.secret_key = os.urandom(32)
 
-API_KEY = "Rn8ocxR2ed7XDx4l35PektxNByKYhG3beJv96YLe"
+API_KEY = open('key_nasa.txt','r').read()
 @app.route("/", methods=['GET', 'POST'])
 def main():
-    data = urllib.request.urlopen(f"https://api.nasa.gov/insight_weather/?api_key={API_KEY}&feedtype=json&ver=1.0")
+    data = urllib.request.urlopen(f"https://api.nasa.gov/planetary/apod?api_key={API_KEY}")
     w = data.read()
     print(w)
     return render_template('main.html')
