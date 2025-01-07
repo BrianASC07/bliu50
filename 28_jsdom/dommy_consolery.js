@@ -1,38 +1,8 @@
-/*
-  your PPTASK:
-
-  First, familiarize yourself with the given html file for this work.
-
-      then...
-
-  Test drive each bit of code in this file,
-  and insert comments galore, indicating anything
-  you discover,
-  have questions about,
-  or otherwise deem notable.
-
-  Have the given html file open as you work.
-
-  Write with your future self or teammates in mind.
-
-  If you find yourself falling out of flow mode, consult
-  - other teams
-  - MDN
-
-  A few comments have been pre-filled for you...
-
-  (delete this block comment once you are done)
-*/
-
-
-
-
-
-// Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
-// SoftDev pd0
-// K28 -- Getting more comfortable with the dev console and the DOM
-// 2025-01-07t
-// --------------------------------------------------
+/*Chewy Chupucabras :: Ethan Sie, Tanzeem Hasan, Brian Liu
+SoftDev pd4
+K28 -- Manipulating the DOM
+2025-01-07t
+ */
 
 
 //send diagnostic output to console
@@ -100,20 +70,39 @@ var stripe = function()
 	         items[i].classList.add('blue');
 	       }
     }
-    console.log(items)
+    console.log(items) //a lot of information other than just the items when trying to print in the console
 };
 
 
 //insert your implementations here for...
-// FIB
-// FAC
-// GCD
-
+function fac(n) {
+    if (n === 0) {
+      return 1;
+    }
+    return n * fac(n - 1);
+  }
+  
+function fib(n) {
+    if (n <= 1) {
+      return n;
+    }
+    return fib(n - 1) + fib(n - 2);
+  }
+function gcd(a, b) {
+    if (b == 0) {
+        return a;
+    };
+    return gcd(b, a % b);
+  };
 
 // In addition to the style shown above,
 //  you are encouraged to test drive the "arrow function syntax" as shown below.
 //  Note anything notable.
-const myFxn = (param1, param2) => {
-    // body
-    return retVal;
+const myFxn = (a, b) => {
+    if (b == 0) {
+        return a;
+    };
+    return myFxn(b, a % b);
 };
+
+addItem(myFxn(120,20))

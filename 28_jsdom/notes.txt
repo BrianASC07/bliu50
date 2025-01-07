@@ -1,0 +1,12 @@
+Chewy Chupucabras :: Ethan Sie, Tanzeem Hasan, Brian Liu
+SoftDev pd4
+K28 -- Manipulating the DOM
+2025-01-07t
+
+
+DISCO
+* seems like each type of class can only be added to an element once.
+*
+
+QCC
+* what determines the priority of the element classes?
