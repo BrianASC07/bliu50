@@ -1,0 +1,14 @@
+Tanzeem Hasan, Ethan Sie, Brian Liu
+Chewy_Chupucabras
+SoftDev
+K27: JS is just Scheme with Java syntax
+2025-01-06
+time spent: 5 mins
+
+DISCO:
+* Comment in scheme using semicolons, comment in javascript using /* */ or //
+* 
+
+Q/C/C:
+* what is the point of the way JS is formatted? why not just have it as Java instead of combining elemnts of scheme?
+* is OOP possible in JS?
