@@ -26,9 +26,11 @@ def index():
     if 'user_id' in session:
         user_id = session['user_id']
         cur = get_db().cursor()
-        cur.execute("SELECT title, latest_text FROM stories WHERE id IN (SELECT story_id FROM contributions WHERE user_id=?)", (user_id,))
+        cur.execute("SELECT id, title, latest_text FROM stories")
         stories = cur.fetchall()
-        return render_template('home.html', stories=stories)
+        cur.execute("SELECT title, latest_text FROM stories WHERE id IN (SELECT story_id FROM contributions WHERE user_id=?)", (user_id,))
+        user_stories = cur.fetchall()
+        return render_template('home.html', stories=stories, user_stories=user_stories)
     return redirect(url_for('login'))
 
 
@@ -93,6 +95,10 @@ def add_to_story(story_id):
     cur = db.cursor()
     cur.execute("SELECT latest_text FROM stories WHERE id=?", (story_id,))
     story = cur.fetchone()
+    cur.execute("SELECT 1 FROM contributions WHERE user_id=? AND story_id=?", (user_id, story_id))
+    has_contributed = cur.fetchone()
+    if has_contributed:
+        return "You have already contributed to this story."
     if request.method == 'POST':
         text = request.form['text']
         cur.execute("UPDATE stories SET latest_text=? WHERE id=?", (text, story_id))
